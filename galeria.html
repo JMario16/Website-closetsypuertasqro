@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head><title>Closets y Puertas de Querétaro (Galería)</title>
+<link rel="stylesheet" href="style2.css">
+<link rel="icon" href="favicon.png"><link rel="shortcut icon" href="favicon.png"><link rel="apple-touch-icon" href="favicon.png">
+<meta charset="UTF-8"></head>
+
+<!--Blanco: #F9F9F9 Blanco-gris: #E1E1E1 Azul claro: #90AFC5 Azul: #336B87 Gris: #383D3D Café: #763626-->
+
+<body>
+
+<!-- GALERÍA BACK -->
+
+<div class="back" id="back"><div class="equis" onclick="salir()"></div><section>
+<div class="uveI" onclick="vol()"></div><img id="image" class="puert" src="Puertas/p1.jpeg"><div class="uveD" onclick="sig()"></div>
+</section></div>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="bloq1"></div>
+<div class="bloq2"></div>
+<div class="bloq3"></div>
+<div class="bloq4"></div>
+<div class="bloq5"></div>
+
+<nav><ul>
+<li><div class="init"><a href="index.html">Início</a></div></li>
+<li><a class="cambio" href="galeria.html">Galería</a></li>
+<li><a class="cambio" href="index.html#nosotros">Nosotros</a></li>
+<li><a class="cambio" href="index.html#contactanos">Contáctanos</a></li>
+</ul></nav>
+
+<div class="logs">
+<a href="https://instagram.com/closetsypuertas.qro"><img src="ig2.png" width="39" height="39"></a>
+<a href="https://www.facebook.com/ClosetsyPuertasDeQueretaro"><img src="fc2.png" width="39" height="39"></a>
+</div>
+
+</header><br><br><br><br><br><br>
+
+<!-- IMAGENES -->
+
+<main><div class="galeria">
+
+<div><img src="puertas.jpeg" onclick="puertas()"><img src="cocina.jpeg" onclick="cocinas()"></div>
+<div><img src="closet.jpeg" onclick="closets()"><img src="otros.jpeg" onclick="otros()"></div>
+
+</div></main><br><br>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div style="justify-content: space-around; flex-direction: row-reverse;">
+<a href="https://instagram.com/closetsypuertas.qro" title="Instagram"><img class="redesf" src="ig2.png"></a>
+<img src="logo.jpg">
+<a href="https://www.facebook.com/ClosetsyPuertasDeQueretaro" title="Facebook"><img class="redesf" src="fc2.png"></a></div>
+<div class="divgclaro"></div>
+<div class="divclaro"></div>
+<div class="divazul"></div>
+<div class="divgray"><p>Copyright© 2024 Closets y Puertas de Querétaro</p></div>
+<div class="divgrown"><a href="#">Volver al inicio</a></div>
+
+</footer>
+
+<!-- SCRIPTS -->
+
+<script>
+
+const back=document.getElementById('back');
+const image=document.getElementById('image');
+var img=0;
+var sec=0;
+
+function puertas(){
+back.style.display='flex';
+document.getElementsByTagName('html')[0].style.overflow='hidden';
+image.src='Puertas/p1.jpeg';
+img=1;
+sec=1;
+}
+
+function cocinas(){
+back.style.display='flex';
+document.getElementsByTagName('html')[0].style.overflow='hidden';
+image.src='Cocinas/c1.jpeg';
+img=1;
+sec=2;
+}
+
+function closets(){
+back.style.display='flex';
+document.getElementsByTagName('html')[0].style.overflow='hidden';
+image.src='Closets/c1.jpeg';
+img=1;
+sec=3;
+}
+
+function otros(){
+back.style.display='flex';
+document.getElementsByTagName('html')[0].style.overflow='hidden';
+image.src='Otros/o1.jpeg';
+img=1;
+sec=4;
+}
+
+function sig(){
+img++;
+
+if(sec==1){
+for(var i=1; i<=5; i++){
+if(img==i){
+image.src='Puertas/p'+i+'.jpeg';
+}
+if(img>=6){
+image.src='Puertas/p1.jpeg';
+img=1;
+} } }
+
+if(sec==2){
+for(var i=1; i<=5; i++){
+if(img==i){
+image.src='Cocinas/c'+i+'.jpeg';
+}
+if(img>=6){
+image.src='Cocinas/c1.jpeg';
+img=1;
+} } }
+
+if(sec==3){
+for(var i=1; i<=10; i++){
+if(img==i){
+image.src='Closets/c'+i+'.jpeg';
+}
+if(img>=11){
+image.src='closets/c1.jpeg';
+img=1;
+} } }
+
+if(sec==4){
+for(var i=1; i<=8; i++){
+if(img==i){
+image.src='Otros/o'+i+'.jpeg';
+}
+if(img>=9){
+image.src='Otros/o1.jpeg';
+img=1;
+} } }
+
+}
+
+function vol(){
+img--;
+
+if(sec==1){
+for(var i=5; i>=1; i--){
+if(img==i){
+image.src='Puertas/p'+i+'.jpeg';
+}
+if(img==0){
+image.src='Puertas/p5.jpeg';
+img=5;
+} } }
+
+if(sec==2){
+for(var i=5; i>=1; i--){
+if(img==i){
+image.src='Cocinas/c'+i+'.jpeg';
+}
+if(img==0){
+image.src='Cocinas/c5.jpeg';
+img=5;
+} } }
+
+if(sec==3){
+for(var i=10; i>=1; i--){
+if(img==i){
+image.src='Closets/c'+i+'.jpeg';
+}
+if(img==0){
+image.src='Closets/c10.jpeg';
+img=10;
+} } }
+
+if(sec==4){
+for(var i=8; i>=1; i--){
+if(img==i){
+image.src='Otros/o'+i+'.jpeg';
+}
+if(img==0){
+image.src='Otros/o8.jpeg';
+img=8;
+} } }
+
+}
+
+function salir(){
+back.style.display='';
+document.getElementsByTagName('html')[0].style.overflow='';
+}
+
+</script>
+
+</body>
+</html>
